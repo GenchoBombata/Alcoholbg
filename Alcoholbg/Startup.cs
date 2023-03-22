@@ -1,5 +1,8 @@
+using Alcoholbg.Abstraction;
 using Alcoholbg.Data;
 using Alcoholbg.Domain;
+using Alcoholbg.Infrastructure;
+using Alcoholbg.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,11 +36,19 @@ namespace Alcoholbg
                 .UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IBrandService, BrandService>();
+
 
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews(); services.AddRazorPages();
+/*
+            services.AddDefaultIdentity<ApplicationUser>()
+       .AddRoles<IdentityRole>()
+       .AddEntityFrameworkStores<ApplicationDbContext>()
+       .AddDefaultTokenProviders();*/
 
             services.AddControllersWithViews();
             services.Configure<IdentityOptions>(option =>
@@ -55,6 +66,7 @@ namespace Alcoholbg
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.PrepareDatabase();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

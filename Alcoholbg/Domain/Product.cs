@@ -18,7 +18,7 @@ namespace Alcoholbg.Domain
         public string Picture { get; set; }
         [Required]
         [Range(0,5000)]
-        public int Quaqntity { get; set; }
+        public int Quantity { get; set; }
         [Required]
         [Range(0, 5000)]
         public decimal Price { get; set; }
