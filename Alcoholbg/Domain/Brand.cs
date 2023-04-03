@@ -8,10 +8,11 @@ namespace Alcoholbg.Domain
 {
     public class Brand
     {
-        public int id { get; set; }
+        //public int id { get; set; }
+        public int Id { get; internal set; }
         [Required]
         [MaxLength(30)]
         public string BrandName { get; set; }
-        public virtual IEnumerable<Product> Productrs { get; set; }=new List<Product>();
+        public virtual IEnumerable<Product> Products { get; set; }=new List<Product>();
     }
 }

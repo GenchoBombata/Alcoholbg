@@ -5,7 +5,7 @@ namespace Alcoholbg.Domain
 {
     public class Product
     {
-        public int id { get; set; }
+        public int Id{ get; set; }
         [Required]
         [MaxLength(30)]
         public string ProductName { get; set; }

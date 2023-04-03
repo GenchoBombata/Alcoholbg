@@ -8,7 +8,8 @@ namespace Alcoholbg.Domain
 {
     public class Category
     {
-        public int id { get; set; }
+        //public int id { get; set; }
+        public int Id { get; internal set; }
         [Required]
         [MaxLength(30)]
         public string CategoryName { get; set; }

@@ -14,5 +14,6 @@ namespace Alcoholbg.Abstraction
         Product GetProductById(int productId);
         bool RemoveById(int productId);
         List<Product> GetProducts(string searchStringCategoryName, string searchBrandName);
+       // object Create(string productName, int categoryId, string picture, int quantity, decimal price, decimal discount);
     }
 }

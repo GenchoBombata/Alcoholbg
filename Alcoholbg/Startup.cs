@@ -38,7 +38,7 @@ namespace Alcoholbg
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IBrandService, BrandService>();
-
+            services.AddTransient<IProductService, ProductService>();
 
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddRoles<IdentityRole>()
