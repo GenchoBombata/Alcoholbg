@@ -20,5 +20,8 @@ namespace Alcoholbg.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Alcoholbg.Models.Product.ProductCreateVM> ProductCreateVM { get; set; }
+        public DbSet<Alcoholbg.Models.Product.ProductIndexVM> ProductIndexVM { get; set; }
+        public DbSet<Alcoholbg.Models.Product.ProductEditVM> ProductEditVM { get; set; }
+        public DbSet<Alcoholbg.Models.Product.ProductDetailsVM> ProductDetailsVM { get; set; }
     }
 }

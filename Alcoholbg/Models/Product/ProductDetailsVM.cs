@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Alcoholbg.Models.Product
 {
-    public class ProductIndexVM
+    public class ProductDetailsVM
     {
-        [Key]
+         [Key]
         public int Id { get; set; }
-        [Display(Name = "Product Name")]
+        [Display(Name = "ProductName")]
         public string ProductName { get; set; }
         public int BrandId { get; set; }
         [Display(Name = "Brand")]
@@ -28,4 +28,5 @@ namespace Alcoholbg.Models.Product
         public decimal Discount { get; set; }
     }
 }
+
 

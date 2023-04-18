@@ -40,15 +40,23 @@ namespace Alcoholbg
             services.AddTransient<IBrandService, BrandService>();
             services.AddTransient<IProductService, ProductService>();
 
+                 services.AddDefaultIdentity<ApplicationUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+
+            /*
             services.AddDefaultIdentity<ApplicationUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews(); services.AddRazorPages();
-/*
-            services.AddDefaultIdentity<ApplicationUser>()
-       .AddRoles<IdentityRole>()
-       .AddEntityFrameworkStores<ApplicationDbContext>()
-       .AddDefaultTokenProviders();*/
+            services.AddControllersWithViews(); services.AddRazorPages();*/
+            /*
+                        services.AddDefaultIdentity<ApplicationUser>()
+                   .AddRoles<IdentityRole>()
+                   .AddEntityFrameworkStores<ApplicationDbContext>()
+                   .AddDefaultTokenProviders();*/
 
             services.AddControllersWithViews();
             services.Configure<IdentityOptions>(option =>

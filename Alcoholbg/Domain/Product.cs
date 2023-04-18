@@ -25,9 +25,6 @@ namespace Alcoholbg.Domain
         [Required]
         [Range(0,100)]
         public decimal Discount { get; set; }
-        [Required]
-        [MaxLength(300)]
-        public string Description { get; set; }
         public virtual IEnumerable<Order> Orders { get; set; } = new List<Order>();
     }
 }
