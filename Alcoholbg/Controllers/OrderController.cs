@@ -104,13 +104,6 @@ namespace Alcoholbg.Controllers
             return View(orderForDb);
         }
 
-
-        // GET: OrderController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
         // GET: OrderController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]

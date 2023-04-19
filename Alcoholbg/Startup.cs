@@ -39,8 +39,10 @@ namespace Alcoholbg
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IBrandService, BrandService>();
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IStatisticsService, StatisticsService>();
 
-                 services.AddDefaultIdentity<ApplicationUser>()
+
+            services.AddDefaultIdentity<ApplicationUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();

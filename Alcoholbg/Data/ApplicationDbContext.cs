@@ -23,5 +23,6 @@ namespace Alcoholbg.Data
         public DbSet<Alcoholbg.Models.Product.ProductIndexVM> ProductIndexVM { get; set; }
         public DbSet<Alcoholbg.Models.Product.ProductEditVM> ProductEditVM { get; set; }
         public DbSet<Alcoholbg.Models.Product.ProductDetailsVM> ProductDetailsVM { get; set; }
+        public DbSet<Alcoholbg.Models.Product.ProductDeleteVM> ProductDeleteVM { get; set; }
     }
 }

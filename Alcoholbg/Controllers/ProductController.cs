@@ -119,7 +119,7 @@ namespace Alcoholbg.Controllers
                     Name = c.CategoryName
                 })
                 .ToList();
-            return View(product);
+            return View(updatedProduct);
         }
         // POST: ProductController/Edit/5
         [HttpPost]
